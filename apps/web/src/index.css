@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ═══════════════════════════════════════════════════════════════════════════
+     1. OBSIDIAN — Champagne Gold & Velvet Charcoal (Premium Dark)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root,
+  :root[data-theme="obsidian"],
+  :root[data-theme="emerald"] {
+    --background: 240 13% 4%;         /* #0A0A0C - Velvet pitch black */
+    --foreground: 240 5% 96%;         /* Off-white to prevent eye strain */
+    --card: 240 8% 8%;                /* Elevated dark card */
+    --card-foreground: 240 5% 94%;
+    --muted: 240 7% 13%;              /* Subtle dark container */
+    --muted-foreground: 240 2% 57%;   /* Balanced contrast text */
+    --accent: 240 8% 12%;
+    --accent-foreground: 240 5% 96%;
+    --primary: 31 55% 67%;            /* Champagne Gold */
+    --primary-foreground: 0 0% 0%;    /* Deep contrast text */
+    --secondary: 240 8% 12%;
+    --secondary-foreground: 240 5% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 8% 12%;             /* Ultra subtle borders */
+    --input: 240 8% 12%;
+    --ring: 31 55% 67%;
+    --radius: 0.75rem;
+
+    --accent-secondary: 174 70% 45%; 
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     2. ARCTIC — Modern Slate & Royal Indigo (Premium Light)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root[data-theme="arctic"] {
+    --background: 210 40% 98%;        /* Slate off-white */
+    --foreground: 222 47% 11%;        /* Deep navy text */
+    --card: 0 0% 100%;                /* Pure white cards */
+    --card-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;             /* Light gray container */
+    --muted-foreground: 215 16% 35%;
+    --accent: 210 24% 92%;
+    --accent-foreground: 222 47% 11%;
+    --primary: 243 75% 59%;           /* Royal Indigo */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;            /* Soft border */
+    --input: 214 32% 91%;
+    --ring: 243 75% 59%;
+    --radius: 0.75rem;
+
+    --accent-secondary: 201 96% 32%;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     3. SUNSET — Deep Copper & Cyber Coral (Vibrant Dark)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root[data-theme="sunset"] {
+    --background: 330 8% 5%;          /* Deep warm charcoal */
+    --foreground: 300 5% 98%;
+    --card: 330 8% 8%;
+    --card-foreground: 300 5% 98%;
+    --muted: 330 8% 11%;
+    --muted-foreground: 330 5% 60%;
+    --accent: 330 8% 12%;
+    --accent-foreground: 300 5% 98%;
+    --primary: 350 89% 60%;           /* Cyber Rose Coral */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 8% 12%;
+    --secondary-foreground: 300 5% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 330 8% 12%;
+    --input: 330 8% 12%;
+    --ring: 350 89% 60%;
+    --radius: 0.75rem;
+
+    --accent-secondary: 350 75% 60%; 
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     4. FOREST — Nordic Spruce & Emerald Pine (Earthy Dark)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root[data-theme="forest"] {
+    --background: 150 14% 4%;         /* Dark forest floor */
+    --foreground: 150 5% 95%;
+    --card: 150 12% 6%;
+    --card-foreground: 150 5% 95%;
+    --muted: 150 10% 10%;
+    --muted-foreground: 156 6% 56%;
+    --accent: 154 14% 10%;
+    --accent-foreground: 150 5% 95%;
+    --primary: 162 76% 41%;           /* Rich Emerald Green */
+    --primary-foreground: 150 40% 2%;
+    --secondary: 150 10% 10%;
+    --secondary-foreground: 150 5% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 154 14% 10%;
+    --input: 154 14% 10%;
+    --ring: 162 76% 41%;
+    --radius: 0.75rem;
+
+    --accent-secondary: 80 60% 55%;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     5. LAVENDER — Icy Lilac & Deep Plum (Elegant Light)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root[data-theme="lavender"] {
+    --background: 270 20% 98%;        /* Soft Lavender Light */
+    --foreground: 244 49% 20%;        /* Deep purple text */
+    --card: 0 0% 100%;
+    --card-foreground: 244 49% 20%;
+    --muted: 260 20% 96%;
+    --muted-foreground: 250 16% 41%;
+    --accent: 250 20% 91%;
+    --accent-foreground: 244 49% 20%;
+    --primary: 258 80% 58%;           /* Royal Lilac Purple */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 260 20% 96%;
+    --secondary-foreground: 244 49% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 250 20% 91%;
+    --input: 250 20% 91%;
+    --ring: 258 80% 58%;
+    --radius: 0.875rem;
+
+    --accent-secondary: 330 75% 60%; 
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     6. SLATE — Deep Ocean & Electric Sky (Tech Dark)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root[data-theme="slate"] {
+    --background: 220 40% 5%;         /* Deep navy slate */
+    --foreground: 210 40% 98%;
+    --card: 224 31% 9%;
+    --card-foreground: 210 40% 98%;
+    --muted: 222 31% 12%;
+    --muted-foreground: 223 18% 56%;
+    --accent: 224 31% 16%;
+    --accent-foreground: 210 40% 98%;
+    --primary: 199 89% 48%;           /* Electric Sky Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 31% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 31% 16%;
+    --input: 224 31% 16%;
+    --ring: 199 89% 48%;
+    --radius: 0.625rem;
+
+    --accent-secondary: 250 70% 65%;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     GLOBAL BASE STYLES
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    letter-spacing: -0.02em;
+  }
+
+  /* Monospace for data/code */
+  code, kbd, samp, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono',
+      Menlo, Consolas, 'Liberation Mono', monospace;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   COMPONENT LAYER — Utility classes and micro-interactions
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+@layer components {
+  /* ── Glassmorphism Card ────────────────────────────────────────────────────── */
+  .card-glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-sm;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--card) / 0.85) 0%,
+      hsl(var(--card) / 0.65) 100%
+    );
+  }
+
+  /* ── Primary Gradient Button ───────────────────────────────────────────────── */
+  .btn-primary-gradient {
+    @apply bg-primary text-primary-foreground font-medium shadow-sm;
+    @apply hover:shadow-md hover:-translate-y-px;
+    @apply active:translate-y-0 active:shadow-sm;
+    @apply transition-all duration-200 ease-out;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary) / 0.85) 100%
+    );
+  }
+
+  .btn-primary-gradient:hover {
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.9) 0%,
+      hsl(var(--primary)) 100%
+    );
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UTILITIES LAYER — Animations, scrollbar, focus states
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+  /* ── Entrance Animations ───────────────────────────────────────────────────── */
+  .animate-fade-in {
+    animation: fadeIn 0.35s ease-out both;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* ── Staggered delay helpers ───────────────────────────────────────────────── */
+  .delay-75  { animation-delay: 75ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-225 { animation-delay: 225ms; }
+  .delay-300 { animation-delay: 300ms; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   KEYFRAMES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CUSTOM SCROLLBAR
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Thin, themed scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.25) transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   GLOBAL INTERACTIVE STATES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Smooth transitions on all interactive elements */
+a,
+button,
+input,
+select,
+textarea,
+[role="button"],
+[role="tab"] {
+  @apply transition-all duration-200 ease-out;
+}
+
+/* Better focus-visible ring */
+:focus-visible {
+  @apply outline-none ring-2 ring-ring/50 ring-offset-2 ring-offset-background;
+}
+
+/* Selection color */
+::selection {
+  background: hsl(var(--primary) / 0.25);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   DIALOG FORM FIX
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* When Dialog uses a form as its immediate child, ensure it acts as a flex container
+   so that DialogBody can scroll and DialogFooter stays fixed. */
+[role="dialog"] > form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  min-height: 0;
+}
+
